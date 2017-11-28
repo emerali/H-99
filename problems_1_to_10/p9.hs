@@ -1,5 +1,5 @@
 pack :: Eq a => [a] -> [[a]]
-pack lst = pack' [] lst
+pack = pack' []
 
 pack' :: Eq a => [[a]] -> [a] -> [[a]]
 pack' acc [] = acc

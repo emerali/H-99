@@ -1,9 +1,8 @@
 encode :: Eq a => [a] -> [(Int, a)]
-encode lst = map (\x -> (length x, head x)) (pack lst)
-
+encode = (map (\x -> (length x, head x))) . pack
 
 pack :: Eq a => [a] -> [[a]]
-pack lst = pack' [] lst
+pack = pack' []
 
 pack' :: Eq a => [[a]] -> [a] -> [[a]]
 pack' acc [] = acc
